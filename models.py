@@ -17,14 +17,13 @@ class Recipe(db.Model):
     updated_at = db.Column(db.String,  nullable=False)
 
     def to_dict(self):
-        """レスポンス用辞書"""
         return {
             "id": self.id,
             "title": self.title,
             "making_time": self.making_time,
             "serves": self.serves,
             "ingredients": self.ingredients,
-            "cost": str(self.cost),       # 仕様は cost を文字列として返す例だった
+            "cost": str(self.cost),
             "created_at": self.created_at,
             "updated_at": self.updated_at,
         }
