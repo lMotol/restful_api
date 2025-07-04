@@ -45,7 +45,7 @@ def create_recipe():
 
     return jsonify({
         "message": "Recipe successfully created!",
-        "recipe": recipe.to_dict()
+        "recipe": [recipe.to_dict()]
     }), 200
 
 # GET /recipes
