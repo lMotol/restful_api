@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: recipe-api
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"   # app が api/index.py にある場合
+    envVars:
+      - key: FLASK_ENV
+        value: production
+
